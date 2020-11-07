@@ -19,8 +19,8 @@ namespace mu2e {
   class StrawElectronicsMaker {
   public:
     StrawElectronicsMaker(StrawElectronicsConfig const& config):_config(config) {}
-    StrawElectronics::ptr_t fromFcl();
-    StrawElectronics::ptr_t fromDb(TrkDelayPanel::cptr_t tdp,
+    StrawElectronics::ptr_t makeFcl();
+    StrawElectronics::ptr_t make(TrkDelayPanel::cptr_t tdp,
 				   TrkPreampRStraw::cptr_t tprs,
 				   TrkPreampStraw::cptr_t tps,
 				   TrkThresholdRStraw::cptr_t ttrs );
