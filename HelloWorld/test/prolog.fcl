@@ -14,3 +14,4 @@ hello_1_2 : {
 both : [ hello1, hello2 ]
 
 END_PROLOG
+ 
