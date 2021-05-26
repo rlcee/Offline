@@ -131,3 +131,4 @@ void FitIPA::CreateIPAStops (const char* filename,unsigned nrows) {
   newfile->Write();
   newfile->Close();
 }
+ 
