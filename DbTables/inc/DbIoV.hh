@@ -15,6 +15,9 @@ namespace mu2e {
   class DbIoV {
   public:
 
+    static const uint32_t maxr  = 999999;
+    static const uint32_t maxsr = 999999;
+
     DbIoV() { setNull(); } // defaults to no valid range
     DbIoV(uint32_t startRun, uint32_t startSubrun,
 	  uint32_t endRun, uint32_t endSubrun):
@@ -81,17 +84,12 @@ namespace mu2e {
     uint32_t endRun() const {return _endRun;}
     uint32_t endSubrun() const {return _endSubrun;}
 
-    uint32_t maxRun() const { return maxr; }
-    uint32_t maxSubrun() const { return maxsr; }
-
     // in format: run subrun run subrun
     std::string simpleString() const;
     // in format run:subrun-run:subrun, with fixed width or compressed
     std::string to_string(bool compress = false) const;
 
   private:
-    static const uint32_t maxsr = 999999;
-    static const uint32_t maxr  = 999999;
     
     uint32_t _startRun;
     uint32_t _startSubrun;
